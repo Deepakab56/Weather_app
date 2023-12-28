@@ -8,7 +8,7 @@ import Header from './Pages/Header';
 
 function App() {
   return (
-    <>
+    <div className=''>
     <BrowserRouter>
       <SearchProvider>
         <Navbar />
@@ -17,7 +17,7 @@ function App() {
         </Routes>
       </SearchProvider>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

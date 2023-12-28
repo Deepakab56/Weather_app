@@ -4,13 +4,13 @@ import ColummData from '../Component/ColummData';
 import searchContext from '../Context/SearchContext';
 
 function Header(props) {
-    const{data} = useContext(searchContext)
-   
+    const{user} = useContext(searchContext)
+  
     
     return (
         <div>
-            <ColummData data={data} />
-            <Weathertodaydetails data={data}/>
+            <ColummData data={user} />
+            <Weathertodaydetails data={user}/>
             
         </div>
     );

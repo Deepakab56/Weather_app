@@ -4,36 +4,36 @@ import { api_key } from "../Utility/request";
 
 const searchContext = createContext()
 export const SearchProvider = ({ children }) => {
-    const [data, setdata] = useState()
+    const [user, setuser] = useState()
 
     const search = async (data) => {
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${data.name}&appid=${api_key}`, { method: "GET" })
+        const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=4e74a0a73fa04c8b94255601232812&q={chandigarh}&aqi=yes`, { method: "GET" })
 
         if (response.ok) {
-            const user = await response.json()
-            setdata(user)
-            console.log(user)
 
         }
     }
 
 
-    const defaultdata=async()=>{
-        const response = await fetch(`https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=44.34&lon=10.99`, { method: "GET" })
+    const defaultdata = async () => {
+        const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=4e74a0a73fa04c8b94255601232812&q={chandigarh}&aqi=yes`, { method: "GET" })
+        if (response.ok) {
+            const user = await response.json()
 
-        const user = await response.json()
-       setdata(user)
+            setuser(user)
 
+        }
     }
-
-    useEffect(()=>{
+    useEffect(() => {
         defaultdata()
-    },[])
+    })
+
     return (
         <searchContext.Provider value={
             {
                 search,
-                data
+                user,
+
 
 
             }

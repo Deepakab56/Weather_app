@@ -3,7 +3,7 @@ import searchContext from '../Context/SearchContext';
 
 function Navbar(props) {
     const [formdata, setformdata] = useState()
-    const{search} = useContext(searchContext)
+    const{search,defaultdata,data} = useContext(searchContext)
     const handleChange = (e) => {
         const { name, value } = e.target
         setformdata((prev) => ({
@@ -15,6 +15,7 @@ function Navbar(props) {
     const searchdetail=(e)=>{
         e.preventDefault()
         search(formdata)
+       
 }
     return (
         <div>
