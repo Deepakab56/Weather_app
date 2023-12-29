@@ -4,17 +4,22 @@ import './App.css';
 import Navbar from './Component/Navbar';
 import { SearchProvider } from './Context/SearchContext';
 import Header from './Pages/Header';
+import Frontpage from './Pages/Frontpage';
+import Headers from './Pages/Headers';
 
 
 function App() {
   return (
-    <div className=''>
+    <div className='bg-dark'>
     <BrowserRouter>
       <SearchProvider>
-        <Navbar />
+        
         <Routes>
-          <Route path='/' element={<Header/>}></Route>
+          <Route path='/' element={<Frontpage/>}></Route>
+          <Route path='/headers' element={<Headers/>}></Route>
         </Routes>
+        
+        
       </SearchProvider>
       </BrowserRouter>
     </div>

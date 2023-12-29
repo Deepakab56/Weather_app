@@ -1,4 +1,45 @@
 
 .bg-primary{
-    background-color:skyblue !important
+    background-color: #000000 !important;
+    color: white !important;
+}
+
+.first-column{
+    background-color: #404347f3 !important;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    background-color: #000000 !important;
+   
+   
+}
+
+.menu-bar{
+    width: 100px;
+   margin-top: 5px;
+    border-radius: 20px;
+    height: 600px;
+    margin: 5px;
+}
+
+.icons{
+    padding: 12px;
+    margin: 10px;
+}
+
+.middle-box{
+    width: 100%;
+}
+
+.footer{
+    width: 400px;
+    height: 600px;
+   
+}
+
+.inp-border{
+    border-radius: 5px;
+    border: none
 }

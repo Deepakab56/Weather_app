@@ -5,6 +5,6 @@ export const Timeformat=(data)=>{
     const time = new Date(data)
     return`
    
-    ${time.toLocaleString()}
+    ${time.toLocaleTimeString()}
     `
 }

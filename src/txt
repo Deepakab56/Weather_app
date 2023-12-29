@@ -1,0 +1,68 @@
+  <div className='bg-primary p-4'>
+          <div className="container-fluids text-center w-100" >  <input type="text" /></div>
+            <div className="container-fluids d-flex align-items-center justify-content-center text-center bg-primary ">
+
+                <div className="container d-flex flex-column justify-content-start align-items-start first-column menu-bar ">
+                    <div className="weather icons">
+                        <p className="fs-5">weather</p>
+                    </div>
+                    <div className="cities icons">
+                        <p className="fs-5">cities</p>
+                    </div>
+                    <div className="maps icons">
+                        <p className="fs-5">Maps</p>
+                    </div>
+
+                    <div className="setting icons">
+                        <p className="fs-5">setting</p></div>
+
+
+
+                </div>
+                <div className="container d-flex flex-column w-100 m-4  ">
+                    <div className="container-fluids  icons p-4 m-4 middle-box  ">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus reiciendis libero culpa, quam cum, eos tempora a dolores maiores voluptatum earum, rem vitae quis quia doloribus magnam assumenda reprehenderit id.
+                    </div>
+                    <div className="container-fluids border icons p-4 m-4  first-column justify-content-start align-items-start">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus reiciendis libero culpa, quam cum, eos tempora a dolores maiores voluptatum earum, rem vitae quis quia doloribus magnam assumenda reprehenderit id.
+                    </div>
+
+                    <div className="container-fluids border icons p-4 m-4 first-column justify-content-start align-items-start">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus reiciendis libero culpa, quam cum, eos tempora a dolores maiores voluptatum earum, rem vitae quis quia doloribus magnam assumenda reprehenderit id.
+                    </div>
+
+                </div>
+                <div className="container d-flex flex-column justify-content-start footer align-items-start first-column"> 
+                
+                
+               
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         <div className="container  w-75 bg-primary">
+               <p className="bg-black text-white w-100 p-3"> {data?.location.name}  , As of  {Timeformat(data?.location.localtime) }  </p>
+               <div className="details text-dark">
+              <div className="d-flex align-items-center justify-content-between">
+              <h1>{data?.current.temp_c} <sup></sup> C</h1>
+              <img src={data?.current.condition.icon} alt="" width={150} />
+              </div>
+               <h1>{data?.current.condition.text}</h1>
+               </div>
+            </div>

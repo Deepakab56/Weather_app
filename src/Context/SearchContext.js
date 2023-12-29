@@ -16,23 +16,24 @@ export const SearchProvider = ({ children }) => {
 
 
     const defaultdata = async () => {
-        const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=4e74a0a73fa04c8b94255601232812&q={chandigarh}&aqi=yes`, { method: "GET" })
+        const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=4e74a0a73fa04c8b94255601232812&q=chandigarh&days=1&aqi=yes&alerts=yes`, { method: "GET" })
         if (response.ok) {
             const user = await response.json()
+          localStorage.setItem("weather" , JSON.stringify(user))
 
             setuser(user)
-
+           
+           
         }
     }
-    useEffect(() => {
-        defaultdata()
-    })
+   
 
     return (
         <searchContext.Provider value={
             {
                 search,
                 user,
+                defaultdata,
 
 
 
