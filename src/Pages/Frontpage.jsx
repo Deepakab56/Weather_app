@@ -11,6 +11,7 @@ function Frontpage(props) {
     const getstart=()=>{
          navigate("/headers")
          defaultdata()
+       
 }
     return (
         <div >

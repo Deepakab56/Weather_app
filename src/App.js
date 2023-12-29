@@ -1,9 +1,9 @@
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Navbar from './Component/Navbar';
+
 import { SearchProvider } from './Context/SearchContext';
-import Header from './Pages/Header';
+
 import Frontpage from './Pages/Frontpage';
 import Headers from './Pages/Headers';
 
