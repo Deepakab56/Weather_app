@@ -1,13 +1,17 @@
 import React from 'react';
-import { faMap } from '@fortawesome/free-regular-svg-icons';
+import { faMap, faSmileWink } from '@fortawesome/free-regular-svg-icons';
 import { faBars, faCity, faCloud, faCloudSunRain } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Icons(props) {
+    const {moredetail} = props
+    const changedetail=()=>{
+    moredetail(false)
+    }
     return (
         <div>
             <div className="weather icons mb-4">
-                <FontAwesomeIcon icon={faCloud} className='fs-3'></FontAwesomeIcon>
+                <FontAwesomeIcon icon={faCloud} className='fs-3' onClick={changedetail}></FontAwesomeIcon>
             </div>
             <div className="weather icons text-center mb-4">
                 <FontAwesomeIcon icon={faCloudSunRain} className='fs-3'></FontAwesomeIcon>

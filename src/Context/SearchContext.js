@@ -6,6 +6,7 @@ import { json } from "react-router-dom";
 const searchContext = createContext()
 export const SearchProvider = ({ children }) => {
     const[weatherdetail,setweatherdetail] = useState()
+    const [moredetail,setmoredetail]= useState(false)
 
 
     const search = async (data) => {
@@ -46,7 +47,8 @@ export const SearchProvider = ({ children }) => {
                search,
              weatherdetail,
              setweatherdetail,
-             defaultdata
+             defaultdata,
+             moredetail,setmoredetail
                
 
 
