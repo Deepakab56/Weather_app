@@ -1,4 +1,4 @@
-import React, { useCallback, useContext } from 'react';
+import React, { useCallback, useContext, useEffect } from 'react';
 import weather from '../Assets/pexels-ravi-kant-1715161.jpg'
 import { useNavigate } from 'react-router-dom';
 import searchContext from '../Context/SearchContext';
@@ -6,13 +6,15 @@ import searchContext from '../Context/SearchContext';
 
 function Frontpage(props) {
 
-    const{defaultdata} = useContext(searchContext)
+    const{defaultdata,weatherdetail} = useContext(searchContext)
     const navigate = useNavigate()
     const getstart=()=>{
          navigate("/headers")
-         defaultdata()
+     
        
 }
+
+
     return (
         <div >
             <div className="contaier-fluids h-200   bg-primary text-white">

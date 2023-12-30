@@ -66,3 +66,23 @@
                <h1>{data?.current.condition.text}</h1>
                </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+            {/* {
+    data.forecast.forecastday.map(items=>items.hour).filter(items => items?.time_epoch > time_format).slice(0, 7).map((items, index) => (
+    <div key={index} className="d-flex flex-column border-right justify-content-center align-items-center m-1 text-white">
+      <span className='mx-2 fs-5 '>{Timeformat(items?.time)}</span>
+      <span className='mt-2 text-center'><img src={items?.condition.icon} alt="" width={80} className='mt-2' /></span>
+      <span className='fw-bold'>{data?.current.temp_c} <sup className='fs-5'>&#176;</sup></span>
+    </div>
+  ))
+} */}
