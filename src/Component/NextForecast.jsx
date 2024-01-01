@@ -17,7 +17,7 @@ function NextForecast(props) {
                             <>
                                 {
                                     data?.forecast.forecastday.map((items, index) => (
-                                        <div key={index} className='d-flex justify-content-between align-items-center w-100'>
+                                        <div key={index} className='d-flex justify-content-around align-items-center w-100'>
                                             <span className='text-center'>{Timeformater(items.date)}</span>
 
                                             <span className='mt-2 text-center '><img src={items?.day.condition.icon} alt="" width={80} className='mt-2 mx-4' /></span>
@@ -33,7 +33,7 @@ function NextForecast(props) {
                                 {
                                     data?.forecast.forecastday.map((items, index) => (
                                         index < 5 ?
-                                            <div key={index} className='d-flex justify-content-between align-items-center w-100'>
+                                            <div key={index} className='d-flex justify-content-around align-items-center w-100'>
                                                 <span className='text-center'>{Timeformater(items.date)}</span>
 
                                                 <span className='mt-2 text-center '><img src={items?.day.condition.icon} alt="" width={80} className='mt-2 mx-4' /></span>

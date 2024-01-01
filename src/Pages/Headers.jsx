@@ -71,7 +71,7 @@ if(formdata)
 
               <div className="container-fluids w-100  mt-2 rounded-2 first-column justify-content-start align-items-start">
               {
-                ! moredetail ?    <AirCondition data={weatherdetail ? weatherdetail : weatherdata}  /> : ""
+                ! moredetail ?    <AirCondition data={weatherdetail ? weatherdetail : weatherdata}  /> : Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni eum itaque ab iste facere molestiae porro natus deleniti adipisci necessitatibus vero voluptatem, cum illum odio tempore nesciunt id sapiente repudiandae!
               }
                
               </div>
